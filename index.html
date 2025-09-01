@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashen Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="thumbnails/Asset 2.webp"
+            alt="Ashen Logo"
+            class="logo-img"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <!-- background image -->
+      <div class="hero-content">
+        <h1>Modern Thumbnail Designs</h1>
+        <p>
+          Eye-catching, fast, and creative YouTube thumbnails to boost your
+          channel.
+        </p>
+        <a href="#contact" class="btn bounce">Hire Me</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about fade-in">
+      <h2>About Me</h2>
+      <p>
+        I'm Ashen, a freelance graphic designer specializing in high-quality
+        YouTube thumbnails. I focus on modern, minimalist, and click-worthy
+        designs.
+      </p>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio fade-in">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img
+            src="thumbnails/thumb1.jpg"
+            alt="Thumbnail 1"
+            class="lightbox-trigger"
+          />
+        </div>
+        <div class="portfolio-item">
+          <img
+            src="thumbnails/thumb2.jpg"
+            alt="Thumbnail 2"
+            class="lightbox-trigger"
+          />
+        </div>
+        <div class="portfolio-item">
+          <img
+            src="thumbnails/thumb3.jpg"
+            alt="Thumbnail 3"
+            class="lightbox-trigger"
+          />
+        </div>
+        <div class="portfolio-item">
+          <img
+            src="thumbnails/thumb4.jpg"
+            alt="Thumbnail 4"
+            class="lightbox-trigger"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services fade-in">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Custom Thumbnails</h3>
+          <p>Unique designs tailored to your channel and niche.</p>
+        </div>
+        <div class="service-card">
+          <h3>Fast Delivery</h3>
+          <p>24-hour turnaround available for urgent projects.</p>
+        </div>
+        <div class="service-card">
+          <h3>Consultation</h3>
+          <p>Advice on designs to maximize click-through rate (CTR).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact fade-in">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" src="" />
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Ashen. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

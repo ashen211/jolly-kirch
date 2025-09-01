@@ -1,0 +1,213 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo container */
+.navbar .logo {
+    height: 40px;       /* fixed navbar height */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;     /* prevent shrinking */
+}
+
+/* Logo image */
+.logo-img {
+    height: 100%;       /* container height follow */
+    width: auto;        /* maintain aspect ratio */
+    display: block;
+}
+
+/* Hover effect */
+.logo-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1dd1a1;
+}
+
+  
+.hero {
+    position: relative;
+    height: 100vh; /* full screen hero */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* text start from bottom */
+    padding-bottom: 100px; /* distance from bottom */
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('thumbnails/hero-bg.jpg'); /* your photo */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: bgFade 2s forwards;
+    z-index: -1;
+  }
+  
+  @keyframes bgFade {
+    to { opacity: 1; }
+  }
+  
+  /* Text pop-up from bottom */
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px); /* start lower */
+    animation: textPop 1s 2s forwards; /* delay for background fade */
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;  
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  @keyframes textPop {
+    to {
+      opacity: 1;
+      transform: translateY(0); /* move up to position */
+    }
+  }
+  
+  /* Button */
+  .btn {
+    background-color: #1dd1a1;
+    color: #111;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover animation */
+  .btn:hover {
+    transform: scale(1.1) rotate(-2deg); /* slightly bigger + tilt */
+    background-color: #10ac84;          /* color change */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Optional: continuous subtle bounce */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .btn.bounce {
+    animation: bounce 2s infinite;
+  }  
+  
+  /* Sections */
+  section {
+    padding: 80px 40px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+  }
+  
+  .portfolio-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-card {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+  }
+  
+  /* Contact */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  
